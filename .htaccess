@@ -1,0 +1,8 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteRule ^broadcaster/(.*) broadcaster/index.php [QSA,L]
+	RewriteRule ^xpq.im/(.*) xpq.im/$1 [QSA,L]
+    RewriteRule ^(.*)$ xpq.im/$1 [QSA,L]
+</IfModule>
